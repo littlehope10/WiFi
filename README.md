@@ -4,7 +4,7 @@ numpy
 matplotlib
 pyts
 scipy
-pywt
+pywt(install使用名字 PyWavelets)
 pykalman
 </br>
 如果没看见文件的话，记得吧分支从main调到master
