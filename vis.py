@@ -1,4 +1,3 @@
-import csiread
 import numpy as np
 import matplotlib.pyplot as plt
 from pyts.image import RecurrencePlot
@@ -7,6 +6,18 @@ from scipy.fft import fft
 from utils.methods import mad_remove, apply_kalman_smooth, wavelet_denoise
 from utils.jsoncsi import JsonCSI
 from csi_read import read, cal_abs
+
+import matplotlib
+matplotlib.use('tkAgg')
+
+# 设置图形配置
+config = {
+    "font.family": 'serif',
+    "mathtext.fontset": 'stix',  # matplotlib渲染数学字体时使用的字体，和Times New Roman差别不大
+    "font.serif": ['SimSun'],  # 宋体
+    'axes.unicode_minus': False  # 处理负号，即-号
+}
+matplotlib.rcParams.update(config)
 
 
 csi_np = read('csi-static', True)
